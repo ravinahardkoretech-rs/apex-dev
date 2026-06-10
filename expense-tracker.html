@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background-image: url("images/expense-tracker2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:400px;
+    background:#d82e2e;
+    padding:20px;
+    border-radius:15px;
+    color:white;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.balance{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.summary{
+    display:flex;
+    justify-content:space-between;
+    background:#060a42;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+form input,
+form select,
+form button{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+}
+
+form button{
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+li{
+    background:#334155;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.delete{
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💰 Expense Tracker</h1>
+
+    <div class="balance">
+        <h2>Balance: ₹<span id="balance">0</span></h2>
+    </div>
+
+    <div class="summary">
+        <div>
+            <h3>Income</h3>
+            <p id="income">₹0</p>
+        </div>
+
+        <div>
+            <h3>Expense</h3>
+            <p id="expense">₹0</p>
+        </div>
+    </div>
+
+    <form id="form">
+        <input type="text" id="text" placeholder="Enter Description" required>
+
+        <input type="number" id="amount" placeholder="Enter Amount" required>
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <button>Add Transaction</button>
+    </form>
+
+    <ul id="list"></ul>
+</div>
+
+<script>
+const form = document.getElementById("form");
+const list = document.getElementById("list");
+
+let balance = 0;
+let income = 0;
+let expense = 0;
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const text = document.getElementById("text").value;
+    const amount = Number(document.getElementById("amount").value);
+    const type = document.getElementById("type").value;
+
+    if(type === "income"){
+        income += amount;
+        balance += amount;
+    }else{
+        expense += amount;
+        balance -= amount;
+    }
+
+    updateUI();
+
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+        ${text} - ₹${amount}
+        <button class="delete">X</button>
+    `;
+
+    li.querySelector(".delete").addEventListener("click", function(){
+
+        if(type === "income"){
+            income -= amount;
+            balance -= amount;
+        }else{
+            expense -= amount;
+            balance += amount;
+        }
+
+        updateUI();
+        li.remove();
+    });
+
+    list.appendChild(li);
+
+    form.reset();
+});
+
+function updateUI(){
+    document.getElementById("balance").textContent = balance;
+    document.getElementById("income").textContent = "₹" + income;
+    document.getElementById("expense").textContent = "₹" + expense;
+}
+</script>
+
+</body>
+</html>
