@@ -20,7 +20,10 @@
             <h1>ApexDev</h1>
           </div>
           <div class="list">
-            <ul>
+            <button class="menu-toggle" id="menu-toggle" style="color: #7758dd">
+              ☰
+            </button>
+            <ul class="nav-list" id="nav-list">
               <li class="home"><a href="#">Home</a></li>
               <li class="home"><a href="#">About</a></li>
               <li class="home"><a href="#">Services</a></li>
@@ -29,15 +32,19 @@
             </ul>
           </div>
           <div class="theme">
-            <button class="dark-button" onclick="darkTheme()">🌙</button>
-            <button class="get-theme" onclick="alert('You Can Now Start')">Get Started</button>
+            <button class="dark-button" onclick="darkTheme()"><i class="fa fa-sun-o" aria-hidden="true"></i><i class="fa fa-moon-o" aria-hidden="true"></i></button>
+            <button class="get-theme" onclick="alert('You Can Now Start')">
+              Get Started
+            </button>
           </div>
         </div>
       </div>
     </section>
     <section class="hero">
       <div class="hero-content">
-        <h1>We Build Digital <span><br>Experiences</span></h1>
+        <h1>
+          We Build Digital <span><br />Experiences</span>
+        </h1>
 
         <p>
           ApexDev is a creative web development agency that builds fast, modern
@@ -45,83 +52,60 @@
         </p>
 
         <div class="hero-btns">
-          <button class="btn-primary">
+          <button class="get-theme btn-prim">
             <a href="https://www.hardkore.tech/" target="_blank"
               >Explore Work</a
             >
           </button>
-          <button class="btn-secondary">
+          <button class="get-theme btn-second">
             <a
-              style="color: #7758dd"
               href="https://youtu.be/UOmbmTO1gC4?si=s0lWAxmYmjUyqpGj"
               target="_blank"
-              ><i
-                style="font-size: 19px; padding: 0px 10px; margin: 0px"
-                class="fa fa-play-circle-o"
-                aria-hidden="true"
-              ></i
-              >Watch Video</a
+              >
+              <div class="icon-cont"><i class="fa fa-play-circle-o" aria-hidden="true"></i><p>Watch
+              Video</p></div></a
             >
           </button>
         </div>
 
         <div class="stats">
           <div class="stat-box">
+            <div class="icon-cont">
             <i
-              style="
-                font-size: 25px;
-                color: #7758dd;
-                padding: 10px 5px;
-                margin: 0px 0px;
-              "
+              style="color: #7758dd"
               class="fa fa-smile-o"
               aria-hidden="true"
-            ></i>
+            ></i></div>
             <h2>120+</h2>
             <p>Happy Clients</p>
           </div>
 
           <div class="stat-box">
+            <div class="icon-cont">
             <i
-              style="
-                font-size: 25px;
-                color: rgb(27, 27, 202);
-                padding: 10px 5px;
-                margin: 0px 0px;
-              "
+              style="color: rgb(27, 27, 202)"
               class="fa fa-folder-open-o"
               aria-hidden="true"
-            ></i>
+            ></i></div>
             <h2>230+</h2>
             <p>Projects Done</p>
           </div>
 
           <div class="stat-box">
-            <i
-              style="
-                font-size: 25px;
-                color: green;
-                padding: 10px 5px;
-                margin: 0px 0px;
-              "
-              class="fa fa-trophy"
-              aria-hidden="true"
-            ></i>
+            <div class="icon-cont">
+            <i style="color: green" class="fa fa-trophy" aria-hidden="true"></i></div>
             <h2>5+</h2>
             <p>Awards Won</p>
           </div>
 
           <div class="stat-box">
+            <div class="icon-cont">
             <i
-              style="
-                font-size: 25px;
-                color: orangered;
-                padding: 10px 5px;
-                margin: 0px 0px;
-              "
+              style="color: orangered"
               class="fa fa-users"
               aria-hidden="true"
             ></i>
+            </div>
             <h2>10+</h2>
             <p>Team Members</p>
           </div>
@@ -143,11 +127,9 @@
 
       <div class="feature-container">
         <div class="feature-card">
-          <i
-            style="font-size: 50px; color: #7758dd"
-            class="fa fa-bolt"
-            aria-hidden="true"
-          ></i>
+          <div class="icon-container">
+            <i style="color: #7758dd" class="fa fa-bolt" aria-hidden="true"></i>
+          </div>
           <h3>
             Fast Performance<br />
             <p>Optimized code and best practices for blazing fast websites.</p>
@@ -155,11 +137,13 @@
         </div>
 
         <div class="feature-card">
-          <i
-            style="font-size: 50px; color: rgb(20, 20, 192)"
-            class="fa fa-globe"
-            aria-hidden="true"
-          ></i>
+          <div class="icon-container">
+            <i
+              style="color: rgb(20, 20, 192)"
+              class="fa fa-globe"
+              aria-hidden="true"
+            ></i>
+          </div>
           <h3>
             Fully Responsive<br />
             <p>Websites that looks perfect on all devices and screen sizes.</p>
@@ -167,11 +151,9 @@
         </div>
 
         <div class="feature-card">
-          <i
-            style="font-size: 50px; color: green"
-            class="fa fa-shield"
-            aria-hidden="true"
-          ></i>
+          <div class="icon-container">
+            <i style="color: green" class="fa fa-shield" aria-hidden="true"></i>
+          </div>
           <h3>
             Secure & Reliable<br />
             <p>We follow best security practises to keep your data safe.</p>
@@ -179,11 +161,13 @@
         </div>
 
         <div class="feature-card">
-          <i
-            style="font-size: 50px; color: orangered"
-            class="fa fa-file"
-            aria-hidden="true"
-          ></i>
+          <div class="icon-container">
+            <i
+              style="color: orangered"
+              class="fa fa-file"
+              aria-hidden="true"
+            ></i>
+          </div>
           <h3>
             Modern Design <br />
             <p>Clean, modern and user friendlydesigns that convert.</p>
