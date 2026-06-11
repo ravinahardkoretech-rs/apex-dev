@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
   </head>
 
   <body>
@@ -24,17 +28,18 @@
               ☰
             </button>
             <ul class="nav-list" id="nav-list">
-              <li class="home"><a href="#">Home</a></li>
-              <li class="home"><a href="#">About</a></li>
-              <li class="home"><a href="#">Services</a></li>
-              <li class="home"><a href="#">Projects</a></li>
-              <li class="home"><a href="#">Contact</a></li>
+              <li class="home"><a href="index.html">Home</a></li>
+              <li class="home"><a href="#about">About</a></li>
+              <li class="home"><a href="#services">Services</a></li>
+              <li class="home"><a href="#projects">Projects</a></li>
+              <li class="home"><a href="#contact">Contact</a></li>
             </ul>
           </div>
           <div class="theme">
             <button class="dark-button" onclick="darkTheme()"><i class="fa fa-sun-o" aria-hidden="true"></i><i class="fa fa-moon-o" aria-hidden="true"></i></button>
-            <button class="get-theme" onclick="alert('You Can Now Start')">
-              Get Started
+            <button class="get-theme"><a href="project-brief.html" class="btn">
+  Get Started
+</a>
             </button>
           </div>
         </div>
@@ -241,6 +246,138 @@
         </div>
       </div>
     </section>
+    <section class="about" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About ApexDev</h2>
+      <p>Creating modern digital experiences that help businesses grow.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <h3>🚀 Our Mission</h3>
+        <p>
+          We build fast, responsive, and visually stunning websites that
+          help businesses establish a powerful online presence.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>💡 Our Vision</h3>
+        <p>
+          To become a trusted digital partner by delivering innovative web
+          solutions that drive growth and success.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>🎯 What We Do</h3>
+        <p>
+          From business websites and landing pages to web applications,
+          we create custom solutions tailored to your needs.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>⭐ Why Choose Us</h3>
+        <p>
+          Modern design, clean code, mobile-first development, SEO-friendly
+          structure, and reliable support.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Professional solutions to help your business succeed online.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>
+          Custom websites built with modern technologies for speed,
+          performance, and scalability.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>
+          Mobile-friendly websites that provide a seamless experience
+          across all devices.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>
+          Clean and intuitive interfaces designed to improve engagement
+          and user satisfaction.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Landing Pages</h3>
+        <p>
+          High-converting landing pages that help generate leads and
+          grow your business.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Web Applications</h3>
+        <p>
+          Powerful and scalable web applications tailored to your
+          business requirements.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-card">
+
+      <div class="contact-info">
+        <span>CONTACT US</span>
+        <h2>Let's Build Something Amazing Together</h2>
+
+        <p>
+          Have a project in mind? We'd love to hear about it.
+          Get in touch and let's discuss how we can help bring
+          your ideas to life.
+        </p>
+
+        <div class="contact-details">
+          <p>📧 hello@apexdev.com</p>
+          <p>📱 +91 98765 43210</p>
+          <p>📍 India</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</section>
     <script src="script.js"></script>
   </body>
 </html>
