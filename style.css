@@ -6,6 +6,8 @@
 body {
     font-family: sans-serif;
     margin: 0px;
+    overflow-x: hidden;
+    background: #f8f8fc;
 }
 
 .navbar {
@@ -186,10 +188,6 @@ h1 {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-}
-
-body {
-    background: #f8f8fc;
 }
 
 h3 {
