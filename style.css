@@ -359,13 +359,13 @@ body.dark-mode .fa-sun-o {
 
 .project-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 }
 
 .project-header h2 {
-    font-size: 38px;
+    font-size: 3rem;
     margin-bottom: 8px;
 }
 
